@@ -17,31 +17,7 @@ namespace test_task_web.Controllers
         {
             this.repository = productRepository;
         }
-        //private void PlusCoin(string ValueCoin)
-        //{
-        //    HttpContext.Application.Lock();
-        //    int count = 0;
-
-        //    if (HttpContext.Application[ValueCoin] != null)
-        //        count = (int)HttpContext.Application[ValueCoin];
-
-        //    count++;
-        //    HttpContext.Application[ValueCoin] = count;
-
-
-        //    HttpContext.Application.UnLock();
-        //}
-        //private void DefaultGlobalVariable()
-        //{
-        //    if ((int)(HttpContext.Application["1 руб."]) > 0) SaveCoinInBase("One", "1 руб.", 0);
-        //    if ((int)(HttpContext.Application["2 руб."]) > 0) SaveCoinInBase("Two", "2 руб.", 0);
-        //    if ((int)(HttpContext.Application["5 руб."]) > 0) SaveCoinInBase("Five", "5 руб.", 0);
-        //    if ((int)(HttpContext.Application["10 руб."]) > 0) SaveCoinInBase("Ten", "10 руб.", 0);
-        //    HttpContext.Application["1 руб."] = 0;
-        //    HttpContext.Application["2 руб."] = 0;
-        //    HttpContext.Application["5 руб."] = 0;
-        //    HttpContext.Application["10 руб."] = 0;
-        //}
+        
         public void DefaultViewBag()
         {
             ViewBag.BDontOne = false;
@@ -72,25 +48,7 @@ namespace test_task_web.Controllers
             }
             return Dic;
         }
-        //private string StringToCoin(string StringNameButton)
-        //{
-        //    string text = "";
-        //    switch (StringNameButton)
-        //    {
-        //        case "1 руб.":text="One";
-        //            break;
-        //        case "2 руб.":
-        //            text = "Two";
-        //            break;
-        //        case "5 руб.":
-        //            text = "Five";
-        //            break;
-        //        case "10 руб.":
-        //            text = "Ten";
-        //            break;
-        //    }
-        //    return (text);
-        //}
+       
         private void SaveCoinInBase(string NameNumberCoin)
         {
             Coin coin = repository.Coins.FirstOrDefault(d => d.SNameNumberCoin == NameNumberCoin);
@@ -109,7 +67,7 @@ namespace test_task_web.Controllers
             ViewBag.SumMoney = int.Parse("0");
             ViewBag.RestOfMoney = 0;
             DefaultViewBag();
-            if ( Request.QueryString["id"] == "secret")
+            if ( Request.QueryString["id"] == "qwerty")
                 return Redirect(Url.Action("Index", "Admin")); 
             else return View(repository.Drinks);
         }
@@ -117,10 +75,10 @@ namespace test_task_web.Controllers
         public ActionResult Index(string SumMoney, string clickonbutton,string clickbuttoncoin,string buttonrestofmoney)
         {
             ViewBag.Title = buttonrestofmoney;
-            //(HttpContext.Application["LicenseFile"] as string);
+            
             int iSumInController = 0;
             int.TryParse(SumMoney, out iSumInController);
-            //Sum += k;
+  
             ViewBag.RestOfMoney = 0;
             ViewBag.SumMoney = int.Parse(SumMoney);
             DefaultViewBag();
@@ -160,19 +118,6 @@ namespace test_task_web.Controllers
             }
             
             return View(repository.Drinks);
-        }
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View(repository.Drinks.FirstOrDefault(d => d.ProductID == 1));
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
         }
         public FileContentResult GetImage(int productId)
         {

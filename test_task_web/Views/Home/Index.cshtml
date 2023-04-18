@@ -9,7 +9,7 @@
     @Html.Raw(content);
 }
 
-@*<h2>@ViewBag.Title.</h2>*@
+
 
 <script src="~/Scripts/jquery-3.3.1.js"></script>
 <script src="~/Scripts/jquery.validate.min.js"></script>
@@ -35,10 +35,7 @@
     function DisableButton(Button) {
         var btn = document.getElementById(Button).disabled = false;
     }
-    //function RestOfMoney()
-    //{
-    //    $('input[name="SumMoney"]').val(0);
-    //}
+   
     $(function () {
         $("#One").click(PlusOne);
     });
@@ -51,7 +48,7 @@
     $(function () {
         $("#Ten").click(PlusTen);
     });
-    //$(function () { $("#Button1").click(RestOfMoney) });
+    
 </script>
 
 
@@ -106,28 +103,7 @@
                                     }
                                 }
                             }
-                            @*<td>
-                                <button name="clickonbutton" type="submit" value="Tea" disabled=@ViewBag.BThereisTea><img class="center" src="~/Images/tea.jpg" style="width: 128px; height: 96px;vertical-align: bottom">Чай, 40 руб.</button>
-                            </td>
-                            <td>
-                                <button name="clickonbutton" type="submit" value="Water" disabled=@ViewBag.BThereisWater><img class="center" src="~/Images/water.png" style="width: 128px; height: 96px;vertical-align: bottom">Вода, 35 руб.</button>
 
-                            </td>
-
-                        </tr>
-                        <tr>
-                            <td>
-                                <button name="clickonbutton" type="submit" value="Air" disabled=@ViewBag.BThereisAir><img class="center" src="~/Images/air.png" style="width: 128px; height: 96px;vertical-align: bottom">Воздух, 5 руб.</button>
-
-                            </td>
-                            <td>
-                                <button name="clickonbutton" type="submit" value="Beetlejuice" disabled=@ViewBag.BThereisBeetlejuice><img class="center" src="~/Images/beetlejuice.png" style="width: 128px; height: 96px;vertical-align: bottom">Beetlejuice, 25 руб.</button>
-
-                            </td>
-                            <td>
-                                <button name="clickonbutton" type="submit" value="Yupi" disabled=@ViewBag.BThereisYupi><img class="center" src="~/Images/yupi.jpg" style="width: 128px; height: 96px;vertical-align: bottom">Yupi, 15 руб.</button>
-
-                            </td>*@
                             <td>
                                 <input class="hide" name="SumMoney" value=@ViewBag.SumMoney>
                             </td>
@@ -139,14 +115,7 @@
                     <h3 valign="middle"><center>1 - Вставьте монету</center></h3>
                     <table>
                         <tr>
-                            @*@foreach (var p in Model)
-                            {
-                                <td><input name="clickbuttoncoin" id=@p.SNameCoin class="button" type="submit" value="@p.SNameNumberCoin руб." disabled=@p.BDontCoin /></td>
-                                if (p.SNameCoin == "Two")
-                                {
-                                    @CreateList("</tr> <tr>");
-                                }
-                            }*@
+                         
                             <td><input name="clickbuttoncoin" id="One" class="button" type="submit" value="1 руб." disabled=@ViewBag.BDontOne /></td>
                             <td><input name="clickbuttoncoin" id="Two" class="button" type="submit" value="2 руб." disabled=@ViewBag.BDontTwo /></td>
                         </tr> 

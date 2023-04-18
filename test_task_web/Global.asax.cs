@@ -13,10 +13,7 @@ namespace test_task_web
     {
         protected void Application_Start()
         {
-            //Application["1 руб."] = 0;
-            //Application["2 руб."] = 0;
-            //Application["5 руб."] = 0;
-            //Application["10 руб."] = 0;
+        
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
