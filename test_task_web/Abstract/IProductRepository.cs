@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 using test_task_web.Models;
-
+// Интерфейс для удобства создания последующих представлений
 namespace test_task_web.Abstract
 {
     public interface IProductRepository

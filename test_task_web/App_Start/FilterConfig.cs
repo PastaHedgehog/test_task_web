@@ -1,6 +1,6 @@
 ﻿using System.Web;
 using System.Web.Mvc;
-
+// Фильтер для обработки всех исключений
 namespace test_task_web
 {
     public class FilterConfig

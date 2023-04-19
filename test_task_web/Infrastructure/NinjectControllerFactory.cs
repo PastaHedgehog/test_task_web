@@ -7,7 +7,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
-
+//Фабрика для создание экземпляров классов и связывание интерфейса и их реализации 
 namespace test_task_web.Infrastructure
 {
     public class NinjectControllerFactory : DefaultControllerFactory

@@ -6,17 +6,17 @@ using System.Web.Mvc;
 using test_task_web.Abstract;
 using test_task_web.Concrete;
 using test_task_web.Models;
-
+// Контролер для административного интерфейса
 namespace test_task_web.Controllers
 {
-    //[Authorize]
+    
     public class AdminController : Controller
     {
         private IProductRepository repository;
 
         public AdminController(IProductRepository repo)
         {
-            repository = repo;
+            repository = repo;                                          
         }
         public ViewResult Index()
         {
@@ -49,7 +49,7 @@ namespace test_task_web.Controllers
             }
             else
             {
-                // there is something wrong with the data values
+                // Если происходит какая-то ошибка
                 return View(drink);
             }
         }
@@ -89,7 +89,7 @@ namespace test_task_web.Controllers
             }
             else
             {
-                // there is something wrong with the data values
+                // Если происходит какая-то ошибка
                 return View(coin);
             }
         }

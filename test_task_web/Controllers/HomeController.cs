@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 using test_task_web.Concrete;
 using test_task_web.Abstract;
-
+// Контролер для пользовательского интерфейса
 namespace test_task_web.Controllers
 {
     public class HomeController : Controller

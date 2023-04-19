@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
 using System.Web.Mvc;
-
+//Модель для работы с напитками
 namespace test_task_web.Models
 {
     public class Drink

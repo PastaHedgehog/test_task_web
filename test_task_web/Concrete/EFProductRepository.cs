@@ -2,7 +2,7 @@
 using test_task_web.Models;
 using test_task_web.Concrete;
 using System.Linq;
-
+//закрепление данных в репозитории
 namespace test_task_web.Concrete
 {
     public class EFProductRepository : IProductRepository

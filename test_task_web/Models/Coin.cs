@@ -5,7 +5,7 @@ using System.Web;
 using System.ComponentModel.DataAnnotations;
 using System.Web.Mvc;
 
-
+//Модель для работы с монетами
 namespace test_task_web.Models
 {
     public class Coin

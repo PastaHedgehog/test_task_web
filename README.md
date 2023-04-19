@@ -1,5 +1,17 @@
 # test_task_web
 
+Среда - Visual Studio 2022
+Чтобы попасть в интерфейс администратора требуется использовать следующую строку "?id=qwerty".
+
+test_task_web\test_task_web\test_task_web\App_Data - хранит базу данных
+test_task_web\test_task_web\test_task_web\Abstract\IProductRepository.cs - интерфейс для удобства создания последующих представлений, а конкретнее в контролерах
+test_task_web\test_task_web\test_task_web\Infrastructure\NinjectControllerFactory - фабрика, используется для связывания контролеров и представлений
+test_task_web\test_task_web\test_task_web\Concrete\EFDbContext - используется для подключения базы в web.config
+test_task_web\test_task_web\test_task_web\Concrete\EFProductRepository -используется для связи представления и контролера
+test_task_web\test_task_web\test_task_web\Controllers - хранит контролеры и их реализацию
+test_task_web\test_task_web\test_task_web\Models - хранит модели
+test_task_web\test_task_web\test_task_web\Views - хранит представления
+
 Веб-приложение имитирует работу автомата по продаже напитков. Автомат
 принимает монеты номиналом в 1, 2, 5, 10 рублей. В автомат загружены напитки, которые
 можно купить, внеся сумму, равную или превышающую их стоимость.
@@ -25,4 +37,4 @@
 • Администрировать ассортимент напитков: добавление, удаление напитков, изменение
 их количества и стоимости.
 • Доступ в административный интерфейс по секретному ключу, который передаётся как
-параметр в адресной строке. "?id=secret".
+параметр в адресной строке.
